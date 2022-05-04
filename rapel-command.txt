@@ -1,0 +1,2 @@
+--initialisation de la connexion sdk gcp
+gcloud init 
