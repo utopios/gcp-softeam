@@ -1,2 +1,13 @@
 --initialisation de la connexion sdk gcp
 gcloud init 
+
+--Etapes TP 1
+
+ 1 -- Création d'un VPC.
+ 2 -- Configuration du parfeu avec le VPC.
+ 3 -- Création d'une vm. 
+ 4 -- Mise en place du serveur web.
+ 5 -- Création d'un snapshot.
+ 6 -- Création d'une image.
+ 7 -- Création d'un groupe d'instances (template d'instance).
+ 8 -- Création loadBalancer.
