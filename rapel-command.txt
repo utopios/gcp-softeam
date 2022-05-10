@@ -14,3 +14,7 @@ gcloud init
  6 -- Création d'une image.
  7 -- Création d'un groupe d'instances (template d'instance).
  8 -- Création loadBalancer.
+
+ --Commande GCS
+
+ gsutil cp <source> <destination>
