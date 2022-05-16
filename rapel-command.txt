@@ -21,8 +21,17 @@ gcloud init
  gsutil -m cp -R data* gs://first-bucket-utopios
  gsutil -m cp -R gs://first-bucket-utopios/folderA gs://first-bucket-utopios/folderB
  gsutil -m rm -R gs://first-bucket-utopios
-
+ gsutil iam ch serviceAccount:<address_service>:objectViewer gs://<adresse_bucket>
 
  -- import d'un dump à partir cloud storage vers cloud sql
 
  gcloud sql import sql <nom_instance> gs://<nom_bucket>/dump.gz --database=<nom_base_données>
+
+ -- création de la base de données en cli
+ gcloud sql databases create villes --instance=tp
+
+ -- Récupérer le nom de service de l'instance cloud sql
+ gcloud sql instances describe tp
+ -- Accorder les droits de lecture sur le bucket
+  gsutil iam ch serviceAccount:<address_service>:objectViewer gs://<adresse_bucket>
+ -- Ensuite la commande d'import
