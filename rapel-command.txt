@@ -21,3 +21,8 @@ gcloud init
  gsutil -m cp -R data* gs://first-bucket-utopios
  gsutil -m cp -R gs://first-bucket-utopios/folderA gs://first-bucket-utopios/folderB
  gsutil -m rm -R gs://first-bucket-utopios
+
+
+ -- import d'un dump à partir cloud storage vers cloud sql
+
+ gcloud sql import sql <nom_instance> gs://<nom_bucket>/dump.gz --database=<nom_base_données>
