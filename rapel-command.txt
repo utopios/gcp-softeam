@@ -31,7 +31,7 @@ gcloud init
  gcloud sql databases create villes --instance=tp
 
  -- Récupérer le nom de service de l'instance cloud sql
- gcloud sql instances describe tp
+ gcloud sql instances describe tp | grep serviceAccountEmailAddress
  -- Accorder les droits de lecture sur le bucket
   gsutil iam ch serviceAccount:<address_service>:objectViewer gs://<adresse_bucket>
  -- Ensuite la commande d'import
