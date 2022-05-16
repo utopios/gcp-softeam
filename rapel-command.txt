@@ -35,3 +35,5 @@ gcloud init
  -- Accorder les droits de lecture sur le bucket
   gsutil iam ch serviceAccount:<address_service>:objectViewer gs://<adresse_bucket>
  -- Ensuite la commande d'import
+-- pour se connecter à une instance sql (une autre commande sql en fonction du SGBD fonctionnera également)
+ -- gcloud sql connect tp --user=root
