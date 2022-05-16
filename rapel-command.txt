@@ -37,3 +37,7 @@ gcloud init
  -- Ensuite la commande d'import
 -- pour se connecter à une instance sql (une autre commande sql en fonction du SGBD fonctionnera également)
  -- gcloud sql connect tp --user=root
+
+ Type Mysql    vs   Cloud Spanner
+ Integer, ..        INT64
+ BOOL               BOOL INT64
