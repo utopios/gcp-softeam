@@ -41,3 +41,11 @@ gcloud init
  Type Mysql    vs   Cloud Spanner
  Integer, ..        INT64
  BOOL               BOOL INT64
+
+ -- Pour migrer vers cloud Spanner
+
+ 1 - Contraintes de migration.
+    - Integrer dans la logique métier cote application, la logique des procédures SGBD.
+    ...
+ 2 - Convertir le schéma d'une base de données Mysql vers cloud Spanner (Type de données,...)
+ 
