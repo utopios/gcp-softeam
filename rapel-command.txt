@@ -48,4 +48,18 @@ gcloud init
     - Integrer dans la logique métier cote application, la logique des procédures SGBD.
     ...
  2 - Convertir le schéma d'une base de données Mysql vers cloud Spanner (Type de données,...)
- 
+
+
+ -- Commande Exemple BigTable
+ -- Après installation du cli (gcloud components install cbt) 
+ et l'ajout de Configuration dans le ficher ~/.cbtrc, project-id = <> instance=<instance>
+
+ --Création de la table
+    cbt createtable <nom_table>
+-- Ajout de famille de col
+    cbt createfamily <nom_table> <nom_familiy>
+    cbt ls  => Récupération des tables
+    cbt ls <table> => col family
+
+-- Ajouter des données
+    cbt set <nom_table> <key> family:col=val
