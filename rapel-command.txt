@@ -54,7 +54,7 @@ gcloud init
  -- Après installation du cli (gcloud components install cbt) 
  et l'ajout de Configuration dans le ficher ~/.cbtrc, 
  
- echo project-id = <prject_id> > ~/.cbtrc
+ echo project = <project_id> > ~/.cbtrc
  echo instance = <nom_instance> > ~/.cbtrc
 
  --Création de la table
@@ -72,3 +72,19 @@ Exercice BigTable.
 Créer une instance bigTable avec une table : 
     ecommerce (customers (name, city) products(name, price, category))
 Le but est d'utiliser bigtable pour récupérer les données des commandes par ville et également par catégorie produit
+
+--Correction avec le cli
+cbt createtable ecommerce
+cbt createfamily ecommerce customers
+cbt createfamily ecommerce products
+
+-- On peut ajouter gcc policy avec le cli
+cbt setgcpolicy ecommerce customers maxversions=3
+
+cbt set ecommerce city1#cat1#0001 
+                  customers:name=ihab 
+                  customers:city=city1 
+                  products:name=product1
+                  products:price=30  
+                  products:cat=cat1  
+cbt set ecommerce city1#cat1#0001 customers:name=ihab customers:city=city1 products:name=product1 products:cat=cat1 products:price=30  
