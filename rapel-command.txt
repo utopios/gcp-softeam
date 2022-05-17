@@ -52,7 +52,10 @@ gcloud init
 
  -- Commande Exemple BigTable
  -- Après installation du cli (gcloud components install cbt) 
- et l'ajout de Configuration dans le ficher ~/.cbtrc, project-id = <> instance=<instance>
+ et l'ajout de Configuration dans le ficher ~/.cbtrc, 
+ 
+ echo project-id = <prject_id> > ~/.cbtrc
+ echo instance = <nom_instance> > ~/.cbtrc
 
  --Création de la table
     cbt createtable <nom_table>
