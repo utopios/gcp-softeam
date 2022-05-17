@@ -63,3 +63,9 @@ gcloud init
 
 -- Ajouter des données
     cbt set <nom_table> <key> family:col=val
+
+Exercice BigTable.
+
+Créer une instance bigTable avec une table : 
+    ecommerce (customers (name, city) products(name, price, category))
+Le but est d'utiliser bigtable pour récupérer les données des commandes par ville et également par catégorie produit
