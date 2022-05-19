@@ -93,3 +93,7 @@ cbt set ecommerce city2#cat2#0003 customers:name=toto customers:city=city2 produ
 
 cbt read ecommerce prefix=city1
 cbt read ecommerce regex="^city([#a-z0-9]*)$"
+
+
+--command gcp appEngine
+gcloud app deploy  => Dans une application avec un fichier de déscription app.yaml

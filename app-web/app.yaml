@@ -1,0 +1,5 @@
+runtime: nodejs14
+service: app-web
+handlers:
+  - url: /.*
+    script: server.js

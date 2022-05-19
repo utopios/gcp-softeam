@@ -1,0 +1,9 @@
+indexes:
+- kind: Task
+  properties:
+  - name: category
+    direction: asc
+  - name: priority
+    direction: desc
+
+#--- Requête select * from Task where category = "" and priority < 5 order by priority DESC
