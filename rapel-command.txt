@@ -97,3 +97,11 @@ cbt read ecommerce regex="^city([#a-z0-9]*)$"
 
 --command gcp appEngine
 gcloud app deploy  => Dans une application avec un fichier de déscription app.yaml
+
+
+--Rappel conteneurs.
+
+conteneur est crée à partir d'une image.
+Une image est un validation d'une application à un instant T.
+les images sont récupérée d'un serveur d'image, par defaut on cherche l'image de docker hub.
+- gcp a un service pour enregistrer les images => google container registry

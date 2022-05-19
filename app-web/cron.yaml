@@ -1,0 +1,4 @@
+cron:
+  - url: /sendEmail
+    schedule: every monday 10:00
+    target: app1

@@ -1,0 +1,7 @@
+#--- Envoie vers d'autre service
+dispatch:
+  - url: "/app1"
+    service: app1
+  
+  - url: "/app2"
+    service: app2
