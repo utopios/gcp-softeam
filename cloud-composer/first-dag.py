@@ -5,10 +5,14 @@ from airflow.operators import bash_operator
 
 from airflow import models
 
-bucket_id = models.Variable.get("bucket_id")
+#bucket_id = models.Variable.get("bucket_id")
 
 
-args = {}
+args = {
+    'start_date': airflow.utils.dates.days_ago(0),
+    'retries': 1,
+    'retry_delay': datetime.timedelta(minutes=5)
+}
 
 
 # with airflow.DAG('exemple_dag',default_args=args, schedule_interval=datetime.timedelta(days=1)):
