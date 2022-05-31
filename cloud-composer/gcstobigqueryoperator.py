@@ -2,7 +2,7 @@ import datetime
 from airflow import models
 from airflow.contrib.operators import gcs_to_bq
 from airflow.contrib.operators.bigquery_operator import BigQueryOperator
-DST_BUCKET_UTF8 = 'name_of_bucket/data'
+DST_BUCKET_UTF8 = 'us-central1-tp-composer-eb9d90d9-bucket/dags'
 yesterday = datetime.datetime.combine(
 datetime.datetime.today() - datetime.timedelta(1),
 datetime.datetime.min.time())
@@ -21,14 +21,14 @@ default_args=default_dag_args) as dag:
     load_to_bq_from_gcs = gcs_to_bq.GoogleCloudStorageToBigQueryOperator(
     task_id='load_to_bq_from_gcs',
     source_objects='meteo.csv',
-    write_disposition='overwrite',
+    write_disposition='WRITE_TRUNCATE',
     bucket=DST_BUCKET_UTF8,
     destination_project_dataset_table='utopios_data.meteo'
     )
 
     bq_query = BigQueryOperator(
         task_id='bq_query',
-        sql="""SELECT * FROM utopios_data.meteo where type='TMIN' """,
+        sql="""SELECT * FROM utopios_data.meteo where string_field_2='TMIN' """,
         destination_dataset_table='utopios_data.meteo_min',
         create_disposition='CREATE_IF_NEEDED',
         bigquery_conn_id='bigquery_default'
