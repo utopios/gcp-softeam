@@ -105,3 +105,13 @@ conteneur est crée à partir d'une image.
 Une image est un validation d'une application à un instant T.
 les images sont récupérée d'un serveur d'image, par defaut on cherche l'image de docker hub.
 - gcp a un service pour enregistrer les images => google container registry
+
+
+[18:41] ihab abadi
+https://airflow.apache.org/docs/apache-airflow/1.10.13/_api/airflow/contrib/operators/gcs_to_bq/index.html
+airflow.contrib.operators.gcs_to_bq — Airflow Documentation
+
+[18:41] ihab abadi
+https://airflow.apache.org/docs/apache-airflow/1.10.14/_api/airflow/contrib/operators/bigquery_operator/index.html
+airflow.contrib.operators.bigquery_operator — Airflow Documentation
+
